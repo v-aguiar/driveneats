@@ -1,0 +1,81 @@
+/* ***************** GENERAL STYLES ******************* */
+
+* {
+  --green: #32B72F;
+}
+
+body {
+  background-color: #EEEEEE;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: 16px;
+
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ***************** TOP BAR ******************* */
+
+.top-bar {
+  background-color: #CF2B2B;
+  color: #fff;
+
+  padding: 8px 21px 18px;
+
+  height: 92px;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.top-bar__logo {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-size: 44px;
+
+  color: #fff;
+
+  margin-bottom: 5px;
+}
+
+.top-bar__slogan {
+  font-size: 18px;
+  
+  color: #fff;
+}
+
+/* ***************** MAIN CONTENT | CARDS ******************* */
+
+#main-content {
+  position: absolute;
+  top: 92px;
+}
+
+main h2 {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+
+  margin-bottom: 17px;
+}
+
+#main-content > div {
+  margin-top: 27px;
+}
+
+.cards {
+  margin-top: 31px;
+}

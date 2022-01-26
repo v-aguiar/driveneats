@@ -44,62 +44,46 @@
 --> CORREÇÃO DO PROJETO
 - Para facilitar a correção do projeto, adicione estes atributos nos elementos HTML:
 
-  - [] Grupos de opções de comida
+  - [ ] Grupos de opções de comida
       
       Os diferentes grupos de opções de comida devem ser identificados.
       
       - No elemento que contém todos os pratos (a primeira seção) adicione o atributo `data-identifier="dishes"`
           - Que elemento é esse?
               
-              É o elemento com as opções de prato:
-              
-              ![Captura de tela de 2021-12-06 16-39-23.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ebb40139-39a7-4d93-9a64-10da3e59253a/Captura_de_tela_de_2021-12-06_16-39-23.png)
+              É o elemento com as opções de prato: (imagem no notion)
               
               O elemento que contém cada um destes "Frango Yin Yang" deve receber o atributo.
               
       - No elemento que contém todas as bebidas (a segunda seção), adicione o atributo `data-identifier="drinks"`
           - Que elemento é esse?
               
-              É o elemento que contém as opções de bebida:
-              
-              ![Captura de tela de 2021-12-06 16-40-24.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1cb3c143-952b-4fce-b45d-a5b0a3ca57cf/Captura_de_tela_de_2021-12-06_16-40-24.png)
+              É o elemento que contém as opções de bebida: (imagem no notion)
               
               O elemento que contém cada um destes "Coquinha gelada" deve receber o atributo.
               
       - No elemento que contém todas as sobremesas (a terceira seção), adicione o atributo `data-identifier="desserts"`
           - Que elemento é esse?
               
-              É o elemento que contém as opções de sobremesa:
-              
-              ![Captura de tela de 2021-12-06 16-41-33.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6f8f177b-b5b0-47f8-9bf4-5da22dba21e0/Captura_de_tela_de_2021-12-06_16-41-33.png)
+              É o elemento que contém as opções de sobremesa: (imagem no notion)
               
               O elemento que contém cada um destes "Pudim" deve receber o atributo.
               
-  - [] Opções de comida
+  - [ ] Opções de comida
       - Em cada um dos elementos que é uma opção de comida (prato, bebida ou sobremesa) adicione o atributo `data-identifier="food-option"`
           - Que elementos são esses?
               
-              São todos os elementos de comida, que seguem este layout:
-              
-              ![Captura de tela de 2021-12-06 16-47-30.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7f95bc1e-d0b0-48db-9c2b-7266ee40513f/Captura_de_tela_de_2021-12-06_16-47-30.png)
-              
-              ![Captura de tela de 2021-12-06 16-47-26.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aed8c6b9-36c7-4b1e-99ba-bba8d5993b08/Captura_de_tela_de_2021-12-06_16-47-26.png)
-              
-              ![Captura de tela de 2021-12-06 16-47-22.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/404910e5-b7cc-4062-a389-1480b0548f8d/Captura_de_tela_de_2021-12-06_16-47-22.png)
+              São todos os elementos de comida, que seguem este layout: (imagem no notion)
               
       - Adicione também o atributo `data-identifier="food-title"` no nome da opção de comida
           - Que elemento é esse?
               
-              É o elemento que exibe o título da comida dentro da caixinha de comida. 
-              
-              ![Captura de tela de 2021-12-06 16-51-21.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7cf30da4-4f85-4cb2-9dc0-aa23e32fe61c/Captura_de_tela_de_2021-12-06_16-51-21.png)
-              
+              É o elemento que exibe o título da comida dentro da caixinha de comida. (imagem no notion)
+
       - Por fim, adiciona o atributo `data-identifier="food-price"` no preço da opção de comida
           - Que elemento é esse?
               
-              É o elemento que contém o preço da comida:
-              
-              ![Captura de tela de 2021-12-06 16-54-43.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7a7e0f3e-eda1-4382-8710-3f64b0de3a4d/Captura_de_tela_de_2021-12-06_16-54-43.png)
+              É o elemento que contém o preço da comida: (imagem no notion)
               
       - ⚠️ **Atenção!** O preço **deve** conter "R$", separado por um espaço e vírgula para separar os centavos!
           - Exemplos de casos
@@ -128,21 +112,19 @@
               
               Esta lista não é exaustiva, mas serve de exemplos de formatos que **não são válidos**. Por via de regra, se não segue o formato dado nos casos válidos, será considerado incorreto.
               
-  - [] Botão de fechar pedido
+  - [ ] Botão de fechar pedido
       
       O botão de fechar pedido **deve ter o mesmo texto especificado no layout do Figma escrito.** Isto inclui o “Fechar pedido” e “Selecione os 3 itens para fechar o pedido”.
       
-  - [] Bônus 1: Peça nome e endereço
+  - [ ] Bônus 1: Peça nome e endereço
       
       Ao pedir nome e endereço, devem ser pedidos com `prompt`. Qualquer outra forma irá falhar. 
       
-  - [] Bônus 2: Confirme os dados antes de finalizar o pedido
+  - [ ] Bônus 2: Confirme os dados antes de finalizar o pedido
       - Adicione o atributo `data-identifier="confirmation-dialog"` no elemento que contém as informações de confirmação.
           - Que elemento é esse?
               
-              É a caixa verde com os itens selecionados e seus respectivos preços, além do total
-              
-              ![Captura de tela de 2021-12-06 17-01-53.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/12c021c1-2f52-4d89-8d0b-f4259e09beac/Captura_de_tela_de_2021-12-06_17-01-53.png)
+              É a caixa verde com os itens selecionados e seus respectivos preços, além do total (imagem no notion)
               
       - **⚠️ Atenção!** Os preços devem ser escritos da mesma forma! Nos itens, sem o "R$". Já no total, com "R$" e espaço, além de usar vírgula em todos.
       - ⚠️ Atenção! Todos os textos
@@ -158,7 +140,7 @@
 
 
 --> BÔNUS
-- [] Bônus 1: Peça o nome e endereço
+- [ ] Bônus 1: Peça o nome e endereço
     
     Ao clicar em finalizar pedido, lance dois `prompt` para o usuário solicitando seu nome e endereço. Essas informações devem então serem adicionadas na mensagem final que é enviada por WhatsApp nesse formato:
     
@@ -173,6 +155,6 @@
     Endereço: Rua...
     ```
     
-- [] Bônus 2: Confirme os dados antes de finalizar o pedido
+- [ ] Bônus 2: Confirme os dados antes de finalizar o pedido
     
     Ao clicar em "Finalizar pedido", em vez de ir para o WhatsApp direto, primeiro revise a compra seguindo a tela Bônus disponível no Figma.
