@@ -6,12 +6,12 @@
 - [ ]  Faça commits a cada funcionalidade implementada
 
 --> LAYOUT
-- [ ]  Aplicar layout para mobile, seguindo imagens fornecida (não é necessário implementar um layout para desktop)
-- [ ]  O topo e o botão de fechar pedido devem ter posicionamento fixo e não rolar com a barra de rolagem
-- [ ]  Você pode usar imagens e textos aleatórios para ilustrar a página, porém varie o preço em cada item da mesma categoria
-- [ ]  As fontes utilizadas são: [Righteous] (nome do restaurante e títulos das categorias) e [Roboto] (demais textos)
-- [ ]  Para fazer as sombras presentes em alguns elementos, pesquise sobre como aplicar sombras em CSS e brinque com os valores até ficar parecido com as imagens do layout
-- [ ]  Para fazer os produtos rolarem horizontalmente, utilize `overflow-x: scroll`. No modo desktop um scroll é exibido, mas no modo celular não.
+- [x]  Aplicar layout para mobile, seguindo imagens fornecida (não é necessário implementar um layout para desktop)
+- [x]  O topo e o botão de fechar pedido devem ter posicionamento fixo e não rolar com a barra de rolagem
+- [x]  Você pode usar imagens e textos aleatórios para ilustrar a página, porém varie o preço em cada item da mesma categoria
+- [x]  As fontes utilizadas são: [Righteous] (nome do restaurante e títulos das categorias) e [Roboto] (demais textos)
+- [x]  Para fazer as sombras presentes em alguns elementos, pesquise sobre como aplicar sombras em CSS e brinque com os valores até ficar parecido com as imagens do layout
+- [x]  Para fazer os produtos rolarem horizontalmente, utilize `overflow-x: scroll`. No modo desktop um scroll é exibido, mas no modo celular não.
 
 --> SELEÇÃO DE ITENS
 - [ ]  Ao clicar sobre um item, o mesmo deve ser marcado como selecionado, seguindo layout da tela 3
@@ -19,7 +19,7 @@
 - [ ]  Ao clicar em um item já marcado, **não** é necessário desmarcá-lo
 
 --> BOTÃO DE FINALIZAR PEDIDO
-- [ ]  Por padrão, o botão de finalizar pedido deve vir desabilitado. Ao clicar no botão nesse estado, nada deve acontecer.
+- [x]  Por padrão, o botão de finalizar pedido deve vir desabilitado. Ao clicar no botão nesse estado, nada deve acontecer.
 - [ ]  Quando o usuário tiver selecionado os itens das 3 categorias, o botão deve mudar para o estado de habilitado, seguindo layout da tela 5
 
 --> ENVIO DO PEDIDO
@@ -44,7 +44,7 @@
 --> CORREÇÃO DO PROJETO
 - Para facilitar a correção do projeto, adicione estes atributos nos elementos HTML:
 
-  - [ ] Grupos de opções de comida
+  - [x] Grupos de opções de comida
       
       Os diferentes grupos de opções de comida devem ser identificados.
       
