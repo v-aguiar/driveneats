@@ -16,12 +16,12 @@
 
 - SELEÇÃO DE ITENS
   - [x]  Ao clicar sobre um item, o mesmo deve ser marcado como selecionado, seguindo layout da tela 3
-  - [ ]  Ao clicar em um item, caso já exista um item selecionado na mesma categoria, este deve ser desmarcado e o novo item clicado deve ser o novo selecionado
-  - [ ]  Ao clicar em um item já marcado, **não** é necessário desmarcá-lo
+  - [x]  Ao clicar em um item, caso já exista um item selecionado na mesma categoria, este deve ser desmarcado e o novo item clicado deve ser o novo selecionado
+  - [x]  Ao clicar em um item já marcado, **não** é necessário desmarcá-lo
 
 - BOTÃO DE FINALIZAR PEDIDO
   - [x]  Por padrão, o botão de finalizar pedido deve vir desabilitado. Ao clicar no botão nesse estado, nada deve acontecer.
-  - [ ]  Quando o usuário tiver selecionado os itens das 3 categorias, o botão deve mudar para o estado de habilitado, seguindo layout da tela 5
+  - [x]  Quando o usuário tiver selecionado os itens das 3 categorias, o botão deve mudar para o estado de habilitado, seguindo layout da tela 5
 
 - ENVIO DO PEDIDO
   - [ ]  Ao finalizar o pedido, o usuário deverá ser encaminhado para o **WhatsApp Web**, em conversa com o contato do restaurante, já com uma mensagem padrão preenchida
