@@ -124,7 +124,9 @@
       <!-- Desserts section -->
       <div class="desserts">
         <h2>Por fim, sua sobremesa</h2>
+        <!-- Cards container -->
         <div data-identifier="desserts" class="cards">
+          <!-- individual cards -->
           <div data-identifier="food-option" class="card" onclick="getDessertCard(this)">
             <img class="card__image"
               src="https://images.unsplash.com/photo-1542310503-ff8da9c02372?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGRlc3NlcnRzfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=300&q=60"
@@ -160,10 +162,9 @@
     </section>
 
     <section id="modal" class="--disabled">
-      <div class="modal-card" data-identifier="confirmation-dialog">
-        <h4>
-          Confirme seu pedido
-        </h4>
+      <div data-identifier="confirmation-dialog" class="modal-card">
+        <h4>Confirme seu pedido</h4>
+        <!-- Order info -->
         <ul class="modal-card__list">
           <li>
             <span class="--plate">Frango Yin Yang</span>
@@ -186,7 +187,7 @@
             </strong>
           </li>
         </ul>
-
+        <!-- Buttons -->
         <a class="modal-card__btn--confirm" target=_blank>Tudo certo, pode pedir!</a>
         <button class="modal-card__btn--cancel" onclick="closeModal()">Cancelar</button>
       </div>

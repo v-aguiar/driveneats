@@ -110,8 +110,10 @@ function changeModalText(transactionData) {
 // **************** Get User Data *********************
 
 function getUserData() {
+  // Put all needed data into one array
   const data = document.querySelectorAll('.--selectedCard .card__title, .--selectedCard .card__price')
 
+  // Separate data into each needed element
   const plate = data[0].innerHTML
   const platePrice = data[1].textContent.split(" ")[1]
   const drink = data[2].innerHTML
@@ -119,8 +121,19 @@ function getUserData() {
   const dessert = data[4].innerHTML
   const dessertPrice = data[5].textContent.split(" ")[1]
 
-  const name = prompt("Qual o seu nome?")
-  const address = prompt("Qual o seu endereço?")
+  // Get name and address
+  let name = ''
+  let address = ''
+  let validateData = false
+  // make sure name and address are !== null
+  do {
+    name = prompt("Qual o seu nome?")
+    address = prompt("Qual o seu endereço?", "Rua , Nº , Bairro:")
+
+    validateData = ((name !== null) && (name !== '') && (address !== null) && (address !== 'Rua , Nº , Bairro:'))
+
+  } while(!validateData)
+
   const totalPrice = parseFloat((platePrice).replace(",", ".")) + parseFloat((drinkPrice).replace(",", ".")) + parseFloat((dessertPrice).replace(",", "."))
 
   const transactionData = {
