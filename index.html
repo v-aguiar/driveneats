@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./styles/reset.css">
   <link rel="stylesheet" href="./styles/style.css">
 
+  <link rel="icon" href="./assets/illustative-logo-icon.ico" type="image/x-icon">
   <title>DrivenEats | Victor Aguiar 💜</title>
 </head>
 
@@ -159,42 +160,44 @@
     </section>
 
     <section id="modal" class="--disabled">
-      <div class="modal-card">
+      <div class="modal-card" data-identifier="confirmation-dialog">
         <h4>
           Confirme seu pedido
         </h4>
         <ul class="modal-card__list">
           <li>
-            <span>Frango Yin Yang</span>
-            <span>14,90</span>
+            <span class="--plate">Frango Yin Yang</span>
+            <span class="--plate-price">14,90</span>
           </li>
           <li>
-            <span>Coquinha gelada</span>
-            <span>4,90</span>
+            <span class="--drink">Coquinha gelada</span>
+            <span class="--drink-price">4,90</span>
           </li>
           <li>
-            <span>Pudim</span>
-            <span>7,90</span>
+            <span class="--dessert">Pudim</span>
+            <span class="--dessert-price">7,90</span>
           </li>
           <li class="--strong">
             <strong>
               TOTAL
             </strong>
-            <strong>
+            <strong class="--total-price">
               R$ 27,70
             </strong>
           </li>
         </ul>
 
-        <button class="modal-card__btn--confirm">Tudo certo, pode pedir!</button>
-        <button class="modal-card__btn--cancel">Cancelar</button>
+        <button class="modal-card__btn--confirm" onclick="orderTheMeal()">Tudo certo, pode pedir!</button>
+        <button class="modal-card__btn--cancel" onclick="closeModal()">Cancelar</button>
       </div>
     </section>
   </main>
 
   <footer>
     <section class="bottom-bar">
-      <button onclick="openModal()" class="btn --bg-grey" disabled="disabled">
+      <button
+        onclick="getUserData(document.querySelectorAll('.--selectedCard .card__title, .--selectedCard .card__price'))"
+        class="btn --bg-grey" disabled="disabled">
         <span>Selecione os 3 itens para fechar o pedido</span>
       </button>
     </section>

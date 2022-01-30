@@ -113,15 +113,15 @@
                 
                 Esta lista não é exaustiva, mas serve de exemplos de formatos que **não são válidos**. Por via de regra, se não segue o formato dado nos casos válidos, será considerado incorreto.
                 
-    - [ ] Botão de fechar pedido
+    - [x] Botão de fechar pedido
         
         O botão de fechar pedido **deve ter o mesmo texto especificado no layout do Figma escrito.** Isto inclui o “Fechar pedido” e “Selecione os 3 itens para fechar o pedido”.
         
-    - [ ] Bônus 1: Peça nome e endereço
+    - [x] Bônus 1: Peça nome e endereço
         
         Ao pedir nome e endereço, devem ser pedidos com `prompt`. Qualquer outra forma irá falhar. 
         
-    - [ ] Bônus 2: Confirme os dados antes de finalizar o pedido
+    - [x] Bônus 2: Confirme os dados antes de finalizar o pedido
         - Adicione o atributo `data-identifier="confirmation-dialog"` no elemento que contém as informações de confirmação.
             - Que elemento é esse?
                 
@@ -156,6 +156,6 @@
       Endereço: Rua...
       ```
       
-  - [ ] Bônus 2: Confirme os dados antes de finalizar o pedido
+  - [x] Bônus 2: Confirme os dados antes de finalizar o pedido
       
       Ao clicar em "Finalizar pedido", em vez de ir para o WhatsApp direto, primeiro revise a compra seguindo a tela Bônus disponível no Figma.
