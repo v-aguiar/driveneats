@@ -24,13 +24,13 @@
   - [x]  Quando o usuário tiver selecionado os itens das 3 categorias, o botão deve mudar para o estado de habilitado, seguindo layout da tela 5
 
 - ENVIO DO PEDIDO
-  - [ ]  Ao finalizar o pedido, o usuário deverá ser encaminhado para o **WhatsApp Web**, em conversa com o contato do restaurante, já com uma mensagem padrão preenchida
+  - [x]  Ao finalizar o pedido, o usuário deverá ser encaminhado para o **WhatsApp Web**, em conversa com o contato do restaurante, já com uma mensagem padrão preenchida
       
       **Dica**: Para criar um link que envia uma mensagem via WhatsApp, veja essa página de ajuda do WhatsApp: [https://faq.whatsapp.com/general/chats/how-to-use-click-to-chat?lang=pt](https://faq.whatsapp.com/general/chats/how-to-use-click-to-chat?lang=pt)
       
       **Dica 2**: Para preparar a mensagem para o formato que o WhatsApp espera, pesquise por uma função chamada `encodeURIComponent(minhaString)`
       
-  - [ ]  Essa mensagem deverá seguir este formato:
+  - [x]  Essa mensagem deverá seguir este formato:
       
       ```css
       Olá, gostaria de fazer o pedido:
@@ -137,11 +137,11 @@
             devem ser escritos **da mesma maneira**
             
 
-    Por fim, a página HTML do projeto deve se chamar `index.html` e deve estar na raíz do projeto.
+    - [x] Por fim, a página HTML do projeto deve se chamar `index.html` e deve estar na raíz do projeto.
 
 
 - BÔNUS
-  - [ ] Bônus 1: Peça o nome e endereço
+  - [x] Bônus 1: Peça o nome e endereço
       
       Ao clicar em finalizar pedido, lance dois `prompt` para o usuário solicitando seu nome e endereço. Essas informações devem então serem adicionadas na mensagem final que é enviada por WhatsApp nesse formato:
       

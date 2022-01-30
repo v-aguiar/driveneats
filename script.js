@@ -61,9 +61,12 @@ function areAllCardsChecked() {
 // *************** Modal Functions
 
 const modal = document.getElementById("modal")
+const modalConfirmButton = document.querySelector(".modal-card__btn--confirm")
 
-function openModal() {
+function openModal(transactionData) {
   modal.classList.remove("--disabled")
+
+  modalConfirmButton.setAttribute("href", `https://wa.me/5577991468323?text=${transactionData.message}`)
 }
 
 function closeModal() {
@@ -82,9 +85,7 @@ function changeModalText(transactionData) {
 
 }
 
-// **************** Get user
-
-const users = []
+// **************** Get user data
 
 function getUserData(data) {
   console.log(data)
@@ -103,20 +104,11 @@ function getUserData(data) {
   - Prato: ${plate}
   - Bebida: ${drink}
   - Sobremesa: ${dessert}
-  Total: R$ ${totalPrice}
+  Total: R$ ${totalPrice.toFixed(2).toString().replace(".", ",")}
   
   Nome: ${name}
   Endereço: ${address}
   `)
-
-  // const user = [
-  //   name,
-  //   address,
-  //   message
-  // ]
-
-  // users.push(user)
-  // // console.log(users)'
 
   const transactionData = {
     plate: plate,
@@ -125,7 +117,8 @@ function getUserData(data) {
     drinkPrice: drinkPrice,
     dessert: dessert,
     dessertPrice: dessertPrice,
-    totalPrice: totalPrice.toFixed(2)
+    totalPrice: totalPrice.toFixed(2),
+    message: message
   }
 
   changeModalText(transactionData)
