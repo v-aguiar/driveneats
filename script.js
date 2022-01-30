@@ -85,7 +85,9 @@ function changeModalText(transactionData) {
 
 // **************** Get User Data
 
-function getUserData(data) {
+function getUserData() {
+  const data = document.querySelectorAll('.--selectedCard .card__title, .--selectedCard .card__price')
+
   const plate = data[0].innerHTML
   const platePrice = data[1].textContent.split(" ")[1]
   const drink = data[2].innerHTML
