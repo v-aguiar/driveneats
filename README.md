@@ -1,5 +1,11 @@
 # projeto3-driveneats
 
+## Infos
+
+- 3º projeto feito pelo Bootcamp - T5 da Driven Education. 
+- Implementação do site mobile de Delivery de um restaurante chamado DrivenEats
+- Site: https://v-aguiar.github.io/projeto3-driveneats/
+
 ## Requerimentos
 
 - [x] VERSIONAMENTO
