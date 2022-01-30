@@ -6,7 +6,6 @@ const checkoutButton = document.querySelector(".bottom-bar .btn")
 function getDishCard(dishCard) {
 
   dishesCards.forEach(card => {
-    // console.log(card.classList)
     if((card.classList.contains("--selectedCard")) === true) {
       card.classList.remove("--selectedCard")
     }
@@ -20,7 +19,6 @@ function getDishCard(dishCard) {
 function getDrinkCard(drinkCard) {
 
   drinksCards.forEach(card => {
-    // console.log(card.classList)
     if((card.classList.contains("--selectedCard")) === true) {
       card.classList.remove("--selectedCard")
     }
@@ -34,7 +32,6 @@ function getDrinkCard(drinkCard) {
 function getDessertCard(dessertCard) {
 
   dessertsCards.forEach(card => {
-    // console.log(card.classList)
     if((card.classList.contains("--selectedCard")) === true) {
       card.classList.remove("--selectedCard")
     }
@@ -63,14 +60,16 @@ function areAllCardsChecked() {
 const modal = document.getElementById("modal")
 const modalConfirmButton = document.querySelector(".modal-card__btn--confirm")
 
-function openModal(transactionData) {
+function openModal(message) {
   modal.classList.remove("--disabled")
 
-  modalConfirmButton.setAttribute("href", `https://wa.me/5577991468323?text=${transactionData.message}`)
+  modalConfirmButton.setAttribute("href", `https://wa.me/5577991468323?text=${message}`)
 }
 
 function closeModal() {
   modal.classList.add("--disabled")
+
+  modalConfirmButton.removeAttribute("href")
 }
 
 function changeModalText(transactionData) {
@@ -81,14 +80,12 @@ function changeModalText(transactionData) {
   document.querySelector("#modal .--dessert").innerText = transactionData.dessert
   document.querySelector("#modal .--dessert-price").innerText = transactionData.dessertPrice
 
-  document.querySelector("#modal .--total-price").innerText = `R$ ${transactionData.totalPrice.toString().replace(",", ".")}`
-
+  document.querySelector("#modal .--total-price").innerText = `R$ ${transactionData.totalPrice}`
 }
 
-// **************** Get user data
+// **************** Get User Data
 
 function getUserData(data) {
-  console.log(data)
   const plate = data[0].innerHTML
   const platePrice = data[1].textContent.split(" ")[1]
   const drink = data[2].innerHTML
@@ -100,16 +97,6 @@ function getUserData(data) {
   const address = prompt("Qual o seu endereço?")
   const totalPrice = parseFloat((platePrice).replace(",", ".")) + parseFloat((drinkPrice).replace(",", ".")) + parseFloat((dessertPrice).replace(",", "."))
 
-  const message = encodeURIComponent(`Olá, gostaria de fazer o pedido:
-  - Prato: ${plate}
-  - Bebida: ${drink}
-  - Sobremesa: ${dessert}
-  Total: R$ ${totalPrice.toFixed(2).toString().replace(".", ",")}
-  
-  Nome: ${name}
-  Endereço: ${address}
-  `)
-
   const transactionData = {
     plate: plate,
     platePrice: platePrice,
@@ -117,11 +104,27 @@ function getUserData(data) {
     drinkPrice: drinkPrice,
     dessert: dessert,
     dessertPrice: dessertPrice,
-    totalPrice: totalPrice.toFixed(2),
-    message: message
+    totalPrice: totalPrice.toFixed(2).toString().replace(".", ","),
+    name: name,
+    address: address
   }
 
+  formatMessage(transactionData)
   changeModalText(transactionData)
-  openModal(transactionData)
 }
 
+// ********************* Format Message 
+
+function formatMessage(transactionData) {
+  const message = encodeURIComponent(`Olá, gostaria de fazer o pedido:
+  - Prato: ${transactionData.plate}
+  - Bebida: ${transactionData.drink}
+  - Sobremesa: ${transactionData.dessert}
+  Total: R$ ${transactionData.totalPrice}
+  
+  Nome: ${transactionData.name}
+  Endereço: ${transactionData.address}
+  `)
+
+  openModal(message)
+}

@@ -2,11 +2,11 @@
 
 ## Requerimentos
 
-- VERSIONAMENTO
-  - [X]  Versionamento usando Git é obrigatório, crie um **repositório público** no seu perfil GitHub
-  - [ ]  Faça commits a cada funcionalidade implementada
+- [x] VERSIONAMENTO
+  - [x]  Versionamento usando Git é obrigatório, crie um **repositório público** no seu perfil GitHub
+  - [x]  Faça commits a cada funcionalidade implementada
 
-- LAYOUT
+- [x] LAYOUT
   - [x]  Aplicar layout para mobile, seguindo imagens fornecida (não é necessário implementar um layout para desktop)
   - [x]  O topo e o botão de fechar pedido devem ter posicionamento fixo e não rolar com a barra de rolagem
   - [x]  Você pode usar imagens e textos aleatórios para ilustrar a página, porém varie o preço em cada item da mesma categoria
@@ -14,16 +14,16 @@
   - [x]  Para fazer as sombras presentes em alguns elementos, pesquise sobre como aplicar sombras em CSS e brinque com os valores até ficar parecido com as imagens do layout
   - [x]  Para fazer os produtos rolarem horizontalmente, utilize `overflow-x: scroll`. No modo desktop um scroll é exibido, mas no modo celular não.
 
-- SELEÇÃO DE ITENS
+- [x] SELEÇÃO DE ITENS
   - [x]  Ao clicar sobre um item, o mesmo deve ser marcado como selecionado, seguindo layout da tela 3
   - [x]  Ao clicar em um item, caso já exista um item selecionado na mesma categoria, este deve ser desmarcado e o novo item clicado deve ser o novo selecionado
   - [x]  Ao clicar em um item já marcado, **não** é necessário desmarcá-lo
 
-- BOTÃO DE FINALIZAR PEDIDO
+- [x] BOTÃO DE FINALIZAR PEDIDO
   - [x]  Por padrão, o botão de finalizar pedido deve vir desabilitado. Ao clicar no botão nesse estado, nada deve acontecer.
   - [x]  Quando o usuário tiver selecionado os itens das 3 categorias, o botão deve mudar para o estado de habilitado, seguindo layout da tela 5
 
-- ENVIO DO PEDIDO
+- [x] ENVIO DO PEDIDO
   - [x]  Ao finalizar o pedido, o usuário deverá ser encaminhado para o **WhatsApp Web**, em conversa com o contato do restaurante, já com uma mensagem padrão preenchida
       
       **Dica**: Para criar um link que envia uma mensagem via WhatsApp, veja essa página de ajuda do WhatsApp: [https://faq.whatsapp.com/general/chats/how-to-use-click-to-chat?lang=pt](https://faq.whatsapp.com/general/chats/how-to-use-click-to-chat?lang=pt)
@@ -42,7 +42,7 @@
       
       **Dica**: para formatar um número decimal no formato 27.70, pesquise por `toFixed`
 
-- CORREÇÃO DO PROJETO
+- [x] CORREÇÃO DO PROJETO
   - Para facilitar a correção do projeto, adicione estes atributos nos elementos HTML:
 
     - [x] Grupos de opções de comida
@@ -140,7 +140,7 @@
     - [x] Por fim, a página HTML do projeto deve se chamar `index.html` e deve estar na raíz do projeto.
 
 
-- BÔNUS
+- [x] BÔNUS
   - [x] Bônus 1: Peça o nome e endereço
       
       Ao clicar em finalizar pedido, lance dois `prompt` para o usuário solicitando seu nome e endereço. Essas informações devem então serem adicionadas na mensagem final que é enviada por WhatsApp nesse formato:
