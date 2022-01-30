@@ -112,6 +112,8 @@ main h2 {
   flex-direction: column;
   justify-content: space-between;
 
+  position: relative;
+
   max-width: 172px;
   height: 216px;
 
@@ -146,6 +148,15 @@ main h2 {
   line-height: 17.6px;
 
   margin: 4px 0;
+}
+
+.card__icon {
+  position: absolute;
+  
+  bottom: 15.78px;
+  right: 12.78px;
+
+  width: 15.44px;
 }
 
 /* ***************** FOOTER | BOTTOM BAR******************* */

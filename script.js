@@ -9,9 +9,17 @@ function getDishCard(dishCard) {
     if((card.classList.contains("--selectedCard")) === true) {
       card.classList.remove("--selectedCard")
     }
+
+    for(let i = 0; i < card.children.length; i++) {
+      if(card.children[i].classList.contains("card__icon") === true) {
+        card.removeChild(card.children[i])
+      }
+    }
   })
 
   dishCard.classList.add("--selectedCard")
+
+  addGreenIcon(dishCard)
 
   areAllCardsChecked()
 }
@@ -22,9 +30,17 @@ function getDrinkCard(drinkCard) {
     if((card.classList.contains("--selectedCard")) === true) {
       card.classList.remove("--selectedCard")
     }
+
+    for(let i = 0; i < card.children.length; i++) {
+      if(card.children[i].classList.contains("card__icon") === true) {
+        card.removeChild(card.children[i])
+      }
+    }
   })
 
   drinkCard.classList.add("--selectedCard")
+
+  addGreenIcon(drinkCard)
 
   areAllCardsChecked()
 }
@@ -35,9 +51,17 @@ function getDessertCard(dessertCard) {
     if((card.classList.contains("--selectedCard")) === true) {
       card.classList.remove("--selectedCard")
     }
+
+    for(let i = 0; i < card.children.length; i++) {
+      if(card.children[i].classList.contains("card__icon") === true) {
+        card.removeChild(card.children[i])
+      }
+    }
   })
 
   dessertCard.classList.add("--selectedCard")
+
+  addGreenIcon(dessertCard)
 
   areAllCardsChecked()
 }
@@ -55,7 +79,7 @@ function areAllCardsChecked() {
 
 }
 
-// *************** Modal Functions
+// *************** Modal Functions *********************
 
 const modal = document.getElementById("modal")
 const modalConfirmButton = document.querySelector(".modal-card__btn--confirm")
@@ -83,7 +107,7 @@ function changeModalText(transactionData) {
   document.querySelector("#modal .--total-price").innerText = `R$ ${transactionData.totalPrice}`
 }
 
-// **************** Get User Data
+// **************** Get User Data *********************
 
 function getUserData() {
   const data = document.querySelectorAll('.--selectedCard .card__title, .--selectedCard .card__price')
@@ -115,7 +139,7 @@ function getUserData() {
   changeModalText(transactionData)
 }
 
-// ********************* Format Message 
+// ********************* Format Message *********************
 
 function formatMessage(transactionData) {
   const message = encodeURIComponent(`Olá, gostaria de fazer o pedido:
@@ -129,4 +153,15 @@ function formatMessage(transactionData) {
   `)
 
   openModal(message)
+}
+
+// ******************* Add Green icon *********************
+
+function addGreenIcon(card) {
+  const icon = document.createElement('img')
+  icon.setAttribute('src', './assets/checkmark-icon.svg')
+  icon.setAttribute('alt', 'Checkmark icon')
+  icon.classList.add('card__icon')
+
+  card.appendChild(icon)
 }
